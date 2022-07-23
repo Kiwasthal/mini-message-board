@@ -5,7 +5,26 @@
   </head>
 
   <body>
-    <h1 class="text-red-600"><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <%-include('./partial/nav.ejs') %>
+    <div class="mt-8 grid lg:grid-cols-3 gap-10">
+      <% if (messages.length) { %> <% messages.forEach( message => { %>
+      <div class="bg-gray-50 rounded overflow-hidden shadow-md p-4">
+        <div class="">
+          <div class="text-right"><%= message.added %></div>
+          <%= `User : ${message.user}` %>
+        </div>
+        <div class="panel-body"><%= message.text %></div>
+      </div>
+      <% }) %> <% } else { %> No entries! <a href="/new-entry">Add one!</a>
+      <% } %>
+    </div>
+    <div class="flex justify-end">
+      <button
+        type="button"
+        class="text-white text-xl mt-5 mr-5 bg-cyan-500 hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full px-5 py-2.5 text-center mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        <a href="/new">ADD</a>
+      </button>
+    </div>
   </body>
 </html>
