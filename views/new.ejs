@@ -6,5 +6,32 @@
 
   <body>
     <%-include('./partial/nav.ejs') %>
+    <main class="flex flex-col items-center bg-white shadow-md rounded w-auto">
+      <h1 class="p-5 text-3xl text-cyan-500 font-bold">ENTER YOUR MESSAGE</h1>
+      <form method="post" action="/new" class="w-full max-w-sm">
+        <div>
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            placeholder="Enter user-name"
+            class="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          />
+        </div>
+        <div>
+          <textarea
+            name="messageArea"
+            id="messageArea"
+            cols="25"
+            rows="10"
+            placeholder="Enter your message"
+            class="resize-none shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          ></textarea>
+        </div>
+        <div>
+          <button type="submit">SUBMIT</button>
+        </div>
+      </form>
+    </main>
   </body>
 </html>
