@@ -6,7 +6,7 @@
 
   <body>
     <%-include('./partial/nav.ejs') %>
-    <main class="flex flex-col items-center bg-white shadow-md rounded w-auto">
+    <main class="flex flex-col items-center bg-white shadow-md rounded mt-3">
       <h1 class="p-5 text-3xl text-cyan-500 font-bold">ENTER YOUR MESSAGE</h1>
       <form method="post" action="/new" class="w-full max-w-sm">
         <div>
@@ -28,8 +28,13 @@
             class="resize-none shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           ></textarea>
         </div>
-        <div>
-          <button type="submit">SUBMIT</button>
+        <div class="flex justify-center mt-5 mb-3">
+          <button
+            type="submit"
+            class="bg-cyan-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            SUBMIT
+          </button>
         </div>
       </form>
     </main>
