@@ -9,11 +9,11 @@
     <div class="mt-8 grid lg:grid-cols-3 gap-10 text-gray-500 p-4">
       <% if (messages.length) { %> <% messages.forEach( message => { %>
       <div
-        class="bg-gray-50 rounded overflow-hidden shadow-md p-4 hover:shadow-lg hover:scale-105 transition-all duration-200 ease-in"
+        class="bg-gray-50 rounded overflow-hidden shadow-md p-4 hover:shadow-lg hover:translate-y-1 transition-all duration-200 ease-in"
       >
         <div class="">
-          <div class="text-right"><%= message.added %></div>
-          <%= `User : ${message.user}` %>
+          <div class="text-right text-md"><%= message.added %></div>
+          <div class="text-lg"><%= `User : ${message.user}` %></div>
         </div>
         <div class="panel-body"><%= message.text %></div>
       </div>

@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
   messages.push({
     text: req.body.messageArea,
     user: req.body.userName,
-    added: new Date(),
+    added: new Date().toLocaleString(),
   });
   res.redirect('/');
 });
